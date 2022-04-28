@@ -1,0 +1,13 @@
+<section class="home-container">
+    <div class="banner">
+        <img src="../../../assets/images/banner-desktop.png" alt="Descrição: Banner vermelho com os escritos Grande inauguração e uma imagem com uma mulher com roupa de esporte com pose orgulhosa">
+    </div>
+    <div class="destaques">
+        <h1 class="title">Destaques</h1>
+        <div class="produtos-destaque">
+            <ng-container *ngFor="let produto of produtos; let i = index">
+                <product-view [produto]="produto"></product-view>
+            </ng-container>
+        </div>
+    </div>
+</section>

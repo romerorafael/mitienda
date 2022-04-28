@@ -1,0 +1,28 @@
+<section class="product-container">
+    <main class="main-container">
+        <nav class="search-bar">
+            <input type="search" placeholder="Busque seu produto favorito" class="search-input" (keyup)="searchText($event)">
+            <div class="category-search">
+                <div (click)="showCategories()">
+                    <p> Busque por categorias </p>
+                    <p class="hide-desktop" *ngIf="showMore"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></p>
+                    <p class="hide-desktop" *ngIf="!showMore"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg></p>
+                </div>
+                <ul class="types-search" [ngClass]="{'hide-mobile': !showCategory}">
+                    <li (click)="searchForType('all')" class="product-type">Todos</li>
+                    <ng-container *ngFor="let type of types; let i = index">
+                        <li (click)="searchForType(type)" class="product-type">{{type}}</li>
+                    </ng-container>
+                </ul>
+            </div>
+        </nav>
+        <div class="products">
+            <ng-container *ngFor="let product of products; let i = index">
+                <product-view 
+                    [produto]="product" 
+                    [ngClass]="{'hide': product.hide}"
+                ></product-view>
+            </ng-container>
+        </div>
+    </main>
+</section>

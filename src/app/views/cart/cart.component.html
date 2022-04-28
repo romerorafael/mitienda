@@ -1,0 +1,60 @@
+<section class="cart-container">
+
+    <div class="main-container no-cart" *ngIf="!hasCart">
+        <p class="no-have-title">Ainda não a produtos no seu carrinho</p>
+        <p class="go-to-product">Confira nossos <a routerLink="/produtos">Produtos</a></p>
+    </div>
+
+    <div class="main-container has-cart" *ngIf="hasCart">
+        <div class="bag">
+            <table class="table-product">
+                <tr>
+                    <th>Seus Produtos</th>
+                </tr>
+                <tbody>
+                    <tr *ngFor="let product of products; let i = index">
+                        <td class="product-detail">
+                            <div class="details">
+                                <div class="product-image">
+                                    <img src="{{product.image}}" alt="">
+                                </div>
+                                <div class="product-name">{{product.name}}</div>
+                                <div class="product-total"> {{product.subtotal | currency: 'BRL'}}</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="total"> <strong> Total: {{transaction.total | currency: 'BRL'}}</strong></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="client-register">
+            <!-- Busca o cliente -->
+            <ng-container *ngIf="client!= null && client.cpf == '' ">
+                <form name="formSearch" (ngSubmit)="formSearch.form.valid && searchClient()" #formSearch="ngForm">
+                    <input type="text" placeholder="Digite seu CPF" [(ngModel)]="searchCpf" name="searchCpf" required>
+                    <button type="submit" (click)="searchClient()">Buscar</button>
+                </form>
+            </ng-container>
+
+            <!--  Encontrou o cliente e pode fazer a compra -->
+            <ng-container *ngIf="client != null && client.cpf != ''">
+                <form name="formClient" (ngSubmit)="formClient.form.valid && finishBuy()" #formClient="ngForm">
+                    <div>
+                        <label for="clientCpf"> Cpf: </label>
+                        <input type="text"  [(ngModel)]="client.cpf" name="clientCpf" disabled>
+                    </div>
+                    <div>
+                        <label for="clientName">Nome:</label>
+                        <input type="text"  [(ngModel)]="client.name" name="clientName" disabled>
+                    </div>
+                    <div>
+                        <label for="clientCep">Cep: </label>
+                        <input type="text"  [(ngModel)]="client.cep" name="clientCep" disabled>
+                    </div>
+                    <button type="submit" (click)="finishBuy()"> Finalizar Compra</button>
+                </form>
+            </ng-container>
+                
+        </div>
+    </div>
+</section>

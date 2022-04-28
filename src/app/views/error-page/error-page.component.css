@@ -1,0 +1,6 @@
+.error-container{
+    grid-area: 2 / 1 / 5 / 13; 
+    height: 85vh;
+    width: 100vw;
+    background-color: blue;
+}

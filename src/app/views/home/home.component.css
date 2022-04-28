@@ -1,0 +1,56 @@
+.home-container{
+    grid-area: 2 / 1 / 5 / 13; 
+    width: 100vw;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+}
+
+.banner img{
+    max-width: 60vw;
+    margin: 2rem 0;
+}
+
+.destaques{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.produtos-destaque{
+    display: flex;
+    justify-content: center;
+}
+
+:host ::ng-deep product-view .product-view{
+    margin: 0.5rem;
+    width: 290px;
+    height: 325px;
+}
+
+:host ::ng-deep product-view .product-view img{
+    width: 290px;
+}
+
+@media screen and (max-width:780px) {
+
+    .banner img{
+        max-width: 100vw;
+        margin: 2rem 0;
+    }
+
+    .produtos-destaque{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    :host ::ng-deep product-view .product-view{
+        margin: 0.5rem;
+        width: 105px;
+        height: 180px;
+    }
+}

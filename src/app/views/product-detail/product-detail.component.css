@@ -1,0 +1,140 @@
+.product-view-container{
+    grid-area: 2 / 1 / 5 / 13; 
+    width: 100vw;
+    min-height: 85vh;
+}
+
+.main-container{
+    width: 80%;
+    min-height: 85vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.product-image{
+    border: 1px solid #D4D4D4;
+    height: 70vh;
+    width: 30vw;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image img{
+    width: 70%;
+}
+
+.product-description{
+    height: 70vh;
+    width: 30vw;    
+}
+
+.product-title{
+    font-size: 2rem;
+    border-bottom: 1px solid #000000;
+    width: 400px;
+    text-align: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.product-subtitle{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #000;
+    width: 25%;
+    font-weight: bold;
+}
+
+.description{
+    width: 70%;
+    margin-bottom: 1rem;
+}
+
+.price{
+    font-size: 3rem;
+}
+
+.stock{
+    font-size: 1.2rem;
+}
+
+.last-unities{
+    color: #FF0000;
+}
+
+.finished{
+    color: #808080;
+}
+
+.quantity{
+    margin-top: 1rem;
+    height: 30px;
+}
+
+.quantity-products{
+    height: 100%;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.minus{
+    height: 100%;
+    width: 30px;
+    margin-right: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.plus{
+    height: 100%;
+    width: 30px;
+    margin-left: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.buy-buttom{
+    width: 70%;
+    height: 50px;
+    margin-top: 1rem;
+    background-color: #258d19;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 780px) {
+    .main-container{
+        flex-direction: column;
+        width: 90%;
+    }
+    .product-image{
+        width: 100vw;
+    }
+
+    .product-title{
+        width: 90%;
+    }
+
+    .product-description{
+        width: 100vw;
+        height: auto;
+        min-height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    .buy-buttom{
+        width: 100%;
+    }
+}

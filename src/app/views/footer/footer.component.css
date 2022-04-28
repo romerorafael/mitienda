@@ -1,0 +1,18 @@
+.footer-container{
+    height: 5vh;
+    grid-area: 5 / 1 / 6 / 13;    
+    border-top: 1px solid #000000;
+    box-sizing: border-box;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
+    width: 100%;
+    background-color: var(--support-primary);
+
+}
+.footer-container p{
+    font-weight: bold;
+}
