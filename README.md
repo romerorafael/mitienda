@@ -1,27 +1,22 @@
 # Mitienda
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
+O projeto foi elaborado utilizando o Angular na sua versão 13.2. Tem como intuido simular, de maneira simples, uma loja virtual com área de administrador. 
+O site, só funciona em paralelo ao outro projeto "api_mitienda".
+
+![image](https://user-images.githubusercontent.com/60353241/165944551-32966e2a-9851-4cd6-88f6-82d039852504.png)
+
+Coisas que já compõe o projeto:
+  - Página de Home
+  - Página de Produto
+  - Página de Detalhe do Produto
+  - Página de Carrinho 
+  - Página do Administrador. 
+  
+ Coisas que estão em planejamento:
+  - UX/UI (urgentemente)
+  - Autenticação de usuários
+  - Testes unitários
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para rodar o programa em modo desenvolvedor no terminal e dentro da pasta do projeto basta digitar `ng serve`e navegar utilizando a url `http://localhost:4200/
